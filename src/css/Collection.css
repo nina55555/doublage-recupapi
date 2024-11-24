@@ -1,211 +1,91 @@
 
-*{
-    margin: 0;
-    padding: 0;
-}
 
-
-body{
-    background-color: black;
-   
-}
-
-.mainBox{
-background-image: url(src/assets/ohlogo.jpg);
-    /*background-color: rgb(107, 109, 99);*/
-    /*overflow: scroll;*/
-
-/*pour page collection caroussel*
-    background-image: url(src/assets/def.mp4);
-/**/
-
-
-/*
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-*/
-
-
-width: 100vw;
-height: 100vh;
-
-
-/*
-    min-height: 50%;
-    width: 90%;
-    max-height: 80%;
-    margin: 8px auto;
-    padding: 8px;
-*/
-
-    /*margin: 5px auto 0 auto;*/
-    /*position: absolute;*/
-
-    
-    display: grid;
-    /*grid-template-rows:  16.66% 16.66% 16.66%   12.5% 12.5% 25%;*/
-    grid-template-rows: /*25% 25%*/ 33.3% 33.3% 33.3%;
-
-    grid-template-columns: 33.33% 33.33% 33.33%;
-}
-
-
-.videodudef{
-    background-color: goldenrod;
-    width: 100%;
-    height: 90%;
-    padding: 5px;
-    grid-row: 1/4;
-    grid-column: 1/4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.caroussel{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -5px;
     position: relative;
 }
 
-
-
-.videodudef video{
-    object-fit: fill;
-    /*object-fit: contain;*/
-    height: 100%;
-    width: 100%;
+.caroussel .list .item{
+    position: absolute;
+    width:100%;
+    height: 
+    100%;
+    inset: 0 0 0 0 ;
 }
 
-
- .big--ticket{
-    background-color: rgba(39, 36, 58, 0.295);
-    width: 20%;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*padding: 50px;*/
-    position: absolute;
-    top: 20%;
-    left: 2%;
-    margin: 0 auto;
-    padding: 0px 0px 30px 0px;
-    border-radius: 5px;
+.caroussel .list .item img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-
-
-.ticket{
-    background-color: rgba(0, 0, 0, 0.705);
-    /*width: 125px;*/
-    width: 90%;
-    height: 85px;
-    position: relative;
-    top: 40%;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-wrap: wrap;
-    z-index: 50;
-}
-
-
-
-.ticket h3{
-    color: aliceblue;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(0, 0, 0, 0.705);
-
-    font-size: 17px;
-}
-
-
-
-
-
-.show-cards{
-    background-color: rgb(133, 136, 130);
-    grid-row: 2/4;
-    grid-column: 2/4;
-    width: 30%;
-    height: 25vh;
-    /*position: relative;*/
-    padding-left: 35px;
+.caroussel .list .item .content{
     position: absolute;
-    top: 70%;
-    /*left: 59%;*/
-    right: 2%;
-    z-index: 50;
-    border-radius: 4px;
+    top: 20%;
+    width: 1025px;
+    max-width: 80%;
+    left: 5%;
+}
+
+.caroussel .list .item .content .title{
+    font-size: 20px;
+    color: red;
+}
+
+.caroussel .list .item .content .descr{
+    font-size: 15px;
+    color: black;
+}
+
+.caroussel .list .item .content .button{
+    background-color: blue;
+    height:40px;
+    width:150px;
+    
     display: flex;
+    align-item: center;
     justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+
+}
+
+.caroussel .list .item  .content .button button{
+    background-color: purple;
+    display: flex;
+    align-item: center;
+    justify-content: center;
+    height: 35px;
+    width:125px;
 }
 
 
-
-.card{
-    background-color: darksalmon;
-    margin: 0px auto;
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.thumbnail .item{
     width: 150px;
+    height: 225px;
+    flex-shrink: 0;
     position: relative;
+    border-radius: 10px;
+
 }
 
 
-
-.card img{
-    width: auto;
-    height: 50px;
-}
-
-
-
-.show-product2{
-    width: 50%;
-    height: 50%;
-    background-color: green;
-}
-
-
-
-
-.picmarque{
-    background-color: darkslategray;
+.thumbnail .item img{
     width: 100%;
     height: 100%;
-    z-index:-20;
-
-    
-    grid-row: 1/4;
-    grid-column: 1/4;
+    object-fit: cover;
+    border-radius: 10px;
 }
-
-
-.box-big-defile{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 400;
-    object-fit: fill;
-    opacity: 0.2;
-}
-
-
-
-.big-defile{
-/*
-width: 100%;
-height: 100%;
-*/
-object-fit: fill;
-
-}
-
-
-    

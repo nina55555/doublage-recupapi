@@ -3,7 +3,6 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { Link, NavLink, useParams } from "react-router-dom";
 
-//import { FaInstagram } from 'react-icons/fa';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -13,146 +12,96 @@ import "../css/Cards.css";
 import "../css/Collection.css";
 
 import ReactPlayer from "react-player";
-/*import videoShow from '../assets/cindyB.mp4'*/
 import videoShow from "../assets/videoDefile.mp4";
 
-//import { useParams } from 'react-router-dom';
-
-/*
-import "../css/Product.css";
-import Product from '../pages/Product';
-*/
 
 const Collection = () => {
   const { id } = useParams();
-
-  /*
-   const handleClick = (e) =>{
-    <SingleProduct/>
-    }
-*/
-  /*
-   const {productId } = useParams();
-        const product = model.find((product) => product.id === productId);
-        console.log (product)
-        //const {imageUrl, title} = product
-*/
-
   const { data, isError, isLoading } = useQuery("model", () => {
-    //return axios.get ('http://localhost:3002/collection-test/');
-    //return axios.get (' http://localhost:5979/runways/');
     return axios.get(" http://localhost:5978/defilons/");
   });
 
 
+  return(
+    <div className="caroussel">
+      <div className="list">
+        {/*mapper ici la list */}
+        <div className="item">
+          <img src="src/assets/Capturelogo.PNG" alt="photo1" />
+          <div className="content">
+            <div className="title">title1</div>
+            <div className="descr">descr1</div>
+          
+            <div className="button">
+            <button>see more</button>
+            </div>
 
-
-
-
-
-
-  return (
-    <div className="mainBox">
-      <div className="videodudef">
-
-
-<div className="box-big-defile">
-
-        {data?.data.map((product) => {
-          return (
-
-            <>
-              <div className="big-defile" key={product._id}>
-                {/*{`/product/${product._id} `}*/}
-                <img src={product.imageUrl} />
-              </div>
-
-            </>
-          );
-        })}
-
-</div>
-
-
-        {/*<img className="picmarque" src="/src/assets/ohlogo.jpg" alt="bigPic" />*/}
-
-        <video src={videoShow} autoPlay muted loop />
-        <div className="big--ticket">
-          <div className="ticket">
-            <h3>Voir la salle d'enchere</h3>
           </div>
         </div>
+
+        <div className="item">
+          <img src="src/assets/wallpaint.jpg" alt="photo2" />
+          <div className="content">
+            <div className="title">title2</div>
+            <div className="descr">descr2</div>
+          
+            <div className="button">
+            <button>see more</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="item">
+          <img src="src/assets/pic-br.jpg" alt="photo3" />
+          <div className="content">
+            <div className="title">title3</div>
+            <div className="descr">descr3</div>
+            
+            <div className="button">
+            <button>see more</button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
-      <div className="show-cards">
 
-        {data?.data.map((product) => {
-          return (
+      <div className="thumbnail">
 
-
-            <>
-              
-
-              <div className="card" key={product._id}>
-                <img src={product.imageUrl} />
-
-                <NavLink to={`/product/${product._id} `}>buy now</NavLink>
-               
-              </div>
-            </>
-
-
-          );
-        })}
-
-
-      </div>
-
-
-
-
-      <div className="icons">
-        <div className="text-icon">
-          <p>Follow us and be part of the adventure </p>
+        <div className="item">
+          <img src="src/assets/Capturelogo.PNG" alt="" />
+          <div className="content">
+            <div className="title">name slider</div>
+            <div className="descr">Description</div>
+          </div>
         </div>
-        {/*<FaInstagram className='icon insta' />*/}
-        <div className="icon-items">
-          <ul>
-            <li>
-              <a>
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-            </li>
-            <li>
-              <a>
-                <FontAwesomeIcon icon={faFacebook} />
-              </a>
-            </li>
-            <li>
-              <a>
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-            </li>
-          </ul>
+
+        <div className="item">
+          <img src="src/assets/wallpaint.jpg" alt="" />
+          <div className="content">
+            <div className="title">name slider</div>
+            <div className="descr">Description</div>
+          </div>
         </div>
+
+        <div className="item">
+          <img src="src/assets/pic-br.jpg" alt="" />
+          <div className="content">
+            <div className="title">name slider</div>
+            <div className="descr">Description</div>
+          </div>
+        </div>
+
       </div>
 
 
 
     </div>
-  );
+  )
+
+
+
 };
 export default Collection;
-
-/*
-import Navbar from "../components/Navbar"
-
-export default function Collection() {
-    return (
-        <div> 
-      <h1>Je m'appelle Collection page</h1>
-
-        </div>
-    )
-  }
-  */

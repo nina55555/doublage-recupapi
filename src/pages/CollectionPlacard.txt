@@ -1,0 +1,90 @@
+
+  return (
+    <div className="mainBox">
+      <div className="videodudef">
+
+        <div className="box-big-defile">
+
+                {data?.data.map((product) => {
+                  return (
+
+                    <>
+                      <div className="big-defile" key={product._id}>
+                        {/*{`/product/${product._id} `}*/}
+                        <img src={product.imageUrl} />
+                      </div>
+
+                    </>
+                  );
+                })}
+
+        </div>
+
+
+        {/*<img className="picmarque" src="/src/assets/ohlogo.jpg" alt="bigPic" />*/}
+
+        <video src={videoShow} autoPlay muted loop />
+        <div className="big--ticket">
+          <div className="ticket">
+            <h3>Voir la salle d'enchere</h3>
+          </div>
+        </div>
+      </div>
+
+      <div className="show-cards">
+
+        {data?.data.map((product) => {
+          return (
+
+
+            <>
+              
+
+              <div className="card" key={product._id}>
+                <img src={product.imageUrl} />
+
+                <NavLink to={`/product/${product._id} `}>buy now</NavLink>
+               
+              </div>
+            </>
+
+
+          );
+        })}
+
+
+      </div>
+
+
+
+
+      <div className="icons">
+        <div className="text-icon">
+          <p>Follow us and be part of the adventure </p>
+        </div>
+        {/*<FaInstagram className='icon insta' />*/}
+        <div className="icon-items">
+          <ul>
+            <li>
+              <a>
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+            </li>
+            <li>
+              <a>
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+            </li>
+            <li>
+              <a>
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </div>
+  );
