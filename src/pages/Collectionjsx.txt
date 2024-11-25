@@ -1,0 +1,94 @@
+<div className="caroussel prev">
+      <div className="list">
+        {/*mapper ici la list */}
+        <div className="item">
+          <img src="src/assets/wallpaint.jpg" alt="photo1" />
+          <div className="content">
+            <div className="title">title1</div>
+            <div className="descr">descr1</div>
+          
+            <div className="button">
+            <button>see more</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="item">
+          <img src="src/assets/Capture-marbre2.PNG" alt="photo2" />
+          <div className="content">
+            <div className="title">title2</div>
+            <div className="descr">descr2</div>
+          
+            <div className="button">
+            <button>see more</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="item">
+          <img src="src/assets/pic-br.jpg" alt="photo3" />
+          <div className="content">
+            <div className="title">title3</div>
+            <div className="descr">descr3</div>
+            
+            <div className="button">
+            <button>see more</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div className="thumbnail">
+
+     
+
+        <div className="item">
+          <img src="src/assets/Capture-marbre2.PNG" alt="2nd" />
+          <div className="content">
+            <div className="title">name slider</div>
+            <div className="descr">Description</div>
+          </div>
+        </div>
+
+        <div className="item">
+          <img src="src/assets/pic-br.jpg" alt="3rd" />
+          <div className="content">
+            <div className="title">name slider</div>
+            <div className="descr">Description</div>
+          </div>
+        </div>
+
+        <div className="item">
+          <img src="src/assets/wallpaint.jpg" alt="1st" />
+          <div className="content">
+            <div className="title">name slider</div>
+            <div className="descr">Description</div>
+          </div>
+        </div>
+
+      </div>
+
+{/*  
+      <div className="arrows">
+        <button id= "prev">prev</button>
+        <button id= "next">next</button>
+      </div>
+
+*/}
+
+
+      <div className="arrows">
+        <button onClick={handleprev}  className="prev">prev</button>
+        <button onClick={handlenext}  className="next">next</button>
+
+      </div>
+      
+
+      <div className="time"></div>
+
+    </div>

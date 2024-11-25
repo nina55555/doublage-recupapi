@@ -1,149 +1,79 @@
 
 
+.caroussel{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -5px;
+    position: relative;
+}
 
-
-.container{
+.caroussel .list .item{
     position: absolute;
-    top: 10%;
-    left: 2%;
-    width: 100px;
-    height: 100px;
-    transform: (-50%, -50%);
-    background-color: black;
-}
-
-
-
-.slide{
-    background-color:pink;
-    width: 200px;
-    height: 200px;
-    z-index: 300;
-}
-
-.container .slide .item{
-    width:400px;
-    height:300px;
-    position: absolute;
-    top:10%;
-    transform: translate(-50%, 30%);
-    background-position: 50% 50%;
-    background-size: cover;
-    display: inline-block;
-    transition: 0.5s;
-
-
-}
-
-.slide .item:nth-child(1),
-.slide .item:nth-child(2){
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
     width:100%;
-    height: 100%
+    height: 
+    100%;
+    inset: 0 0 0 0 ;
 }
 
-
-.slide .item:nth-child(3){
-    left:50%;
+.caroussel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-
-.slide .item:nth-child(4) {
-    left: calc(50% + 550px);
-    opacity: 0;
-
-}
-
-
-.item .content {
+.caroussel .list .item .content{
     position: absolute;
-    top: 50%;
-    left: 100px;
-    width: 300px;
-    text-align: left;
-    color: grey;
+    top: 20%;
+    width: 1025px;
+    max-width: 80%;
+    left: 5%;
+}
+
+.caroussel .list .item .content .title{
+    font-size: 20px;
+    color: red;
+}
+
+.caroussel .list .item .content .descr{
+    font-size: 15px;
+    color: black;
+}
+
+.caroussel .list .item .content .button{
+    background-color: blue;
+    height:40px;
+    width:150px;
+    
+    display: flex;
+    align-item: center;
+    justify-content: center;
+    margin: 0 auto;
 
 }
 
-
-.slide .item:nth-child(2) .content {
-    display: block;
+.caroussel .list .item  .content .button button{
+    background-color: purple;
+    display: flex;
+    align-item: center;
+    justify-content: center;
+    height: 35px;
+    width:125px;
 }
 
-
-
-.arrows{
-    z-index: 500;
-    position: absolute;
-    top:59%;
-    width:50px;
-    height:50px;
-    background-color: red;
-}
-
-
-.arrows .prev{
-    width: 40px;
-    height: 40px;
-    color:green;
-}
-
-.big-defile{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-.big-defile:nth-child(16) {
-    opacity:0;
-}
-*/
 
 .thumbnail{
     position: absolute;
-    bottom: 150px;
-    left: 25%;
-    width: 75%;
-    height:250px;
-
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
     z-index: 100;
     display: flex;
-    justify-content: space-between;
     gap: 20px;
-    background-color: blue;
+    background-color: transparent;
 }
 
-.thumbnail .card{
-    border: 2px solid red;
+.thumbnail .item{
     width: 150px;
     height: 220px;
     flex-shrink: 0;
@@ -151,22 +81,6 @@
     border-radius: 10px;
 
 }
-
-
-
-.thumbnail .card:nth-child(1) {
-    position: relative;
-    left: 15px;
-}
-
-
-
-
-.thumbnail .card:nth-child(2) {
-    position: relative;
-    left: 45px;
-}
-
 
 
 .thumbnail .item img{
@@ -209,19 +123,13 @@
 }
 
 
-.big-defile .thumbnail .item:nth-child(1){
+.caroussel .list .item:nth-child(1){
     z-index: 1;
 }
 
-
-
-.thumbnail .item:nth-child(2){
-    z-index: 2;
-}
-
-.big-defile .thumbnail .item:nth-child(1) .title,
-.big-defile .thumbnail .item:nth-child(1) .descr,
-.big-defile .thumbnail .item:nth-child(1) .button{
+.caroussel .list .item:nth-child(1) .title,
+.caroussel .list .item:nth-child(1) .descr,
+.caroussel .list .item:nth-child(1) .button{
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
@@ -239,28 +147,22 @@
 
 
 
-.big-defile .thumbnail .item:nth-child(1) .title{
+.caroussel .list .item:nth-child(1) .title{
     animation-delay: 1.2s;
 } 
 
 
-.big-defile .thumbnail .item:nth-child(1) .descr{
+.caroussel .list .item:nth-child(1) .descr{
     animation-delay: 1.4s;
 } 
 
 
-.big-defile .thumbnail .item:nth-child(1) .button{
+.caroussel .list .item:nth-child(1) .button{
     animation-delay: 1.8s;
 } 
 
 
-
-
-
-
-
-
-.big-defile:nth-child(1) img{
+.caroussel.next .list .item:nth-child(1) img{
     width:150px;
     height:220px;
     position: absolute;
