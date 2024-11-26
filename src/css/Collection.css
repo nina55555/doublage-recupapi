@@ -219,6 +219,8 @@
     z-index: 2;
 }
 
+
+
 .big-defile .thumbnail .item:nth-child(1) .title,
 .big-defile .thumbnail .item:nth-child(1) .descr,
 .big-defile .thumbnail .item:nth-child(1) .button{
@@ -379,3 +381,42 @@
 }
 
 
+
+
+.thumbnail .card{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 10%;
+    left: 10px;
+}
+
+
+/*
+.thumbnail .card:nth-child(1){
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    width:200px;
+    height:200px;
+}
+
+
+
+
+.thumbnail .card:nth-child(2){
+    position: absolute;
+    top: 10%;
+    left: 40px;
+    width:200px;
+    height:200px;
+    display: flex;
+}
+    */
+
+
+
+.thumbnail .card img{
+    width:100px;
+    height:100px;
+}

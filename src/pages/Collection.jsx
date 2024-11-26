@@ -143,9 +143,14 @@ const handlenext = () => {
                   <div className="thumbnail">
 
                     
+{data?.data.map((product) => {
+  return(
 
-
+  
                         <div className="card" key={product._id}>
+
+                                            
+
                       <img src={product.imageUrl} className=" changing-class active" />
       {/* 
                     <NavLink to={`/product/${product._id} `}>buy now</NavLink>
@@ -154,8 +159,11 @@ const handlenext = () => {
       {/*
                       <NavLink to="Home">buy now</NavLink>
       */}
+      
+                  
                     </div>
-        
+     )
+      })}  
 {/*
 
 
