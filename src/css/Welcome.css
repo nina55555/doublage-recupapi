@@ -27,8 +27,6 @@
 .mainBoxx-welcome{
     /*background-color: rgb(107, 109, 99);*/
     background-color: rgb(255, 255, 253);
-
-
     /*display: flex;*/
     display: grid;
     grid-template-rows: 100%;
@@ -46,14 +44,23 @@
     max-height: 100%;
     */
     /*width: auto;*/
+
+    //height: 100px;
     height: 100%;
+
+
+
     /*
     margin: 5px;
     padding: 5px;
     */
     border: 1px solid black;
-    /*animation: transitionIn 8.5s;*/
+    //animation: transitionIn 8.5s;
+    
+
 }
+
+
 
 
 
@@ -76,8 +83,13 @@
     /*z-index: 0;*/
     width: 100%;
     border-radius: 5px;
-    /*height: auto;*/
+
+    /*******/
+    //height: auto;
+    //min-height:70%;
     height:100%;
+    /*******/
+
     margin: 0 auto;
     /*display: none;*/
     padding: 15px;
