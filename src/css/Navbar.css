@@ -279,7 +279,7 @@
 
 
 
-
+/******845ok ou 1060****/
 
 @media (max-width: 1060px){
 
@@ -289,6 +289,7 @@
         display: flex;
         width: 100%;
         height: 80px;
+        z-index:5000;
     }
 
     .lilNav-box0{
