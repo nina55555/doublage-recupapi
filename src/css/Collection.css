@@ -1,79 +1,50 @@
 
 
-
-
-.container{
-    position: absolute;
-    top: 10%;
-    left: 2%;
-    width: 100px;
-    height: 100px;
-    transform: (-50%, -50%);
-    background-color: black;
+body{
+    overflow:hidden;
 }
 
-/*
+.App{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+.containerr{
+    position: absolute;
+    top:85px;
+    /*
+    left:50%;
+    transform: translate(-50%);
+    */
+    width: auto;
+    height: auto;
+    border: 3px solid green;
+    background-color: black;
+    padding: 0px;
+    margin:10px;
+    right:0px;
+    left:0px;
+    bottom: 0px;
+    /*
+    margin:20px;
+    */
+}
+
+
 
 .slide{
-    background-color:pink;
-    width: 200px;
-    height: 200px;
-    z-index: 300;
-}
-
-
-*/
-
-
-.container .slide .item{
-    width:400px;
-    height:300px;
     position: absolute;
-    top:10%;
-    transform: translate(-50%, 30%);
-    background-position: 50% 50%;
-    background-size: cover;
-    display: inline-block;
-    transition: 0.5s;
-
-
-}
-
-.slide .item:nth-child(1),
-.slide .item:nth-child(2){
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-    width:100%;
-    height: 100%
-}
-
-
-.slide .item:nth-child(3){
-    left:50%;
-}
-
-
-.slide .item:nth-child(4) {
-    left: calc(50% + 550px);
-    opacity: 0;
-
-}
-
-
-.item .content {
-    position: absolute;
-    top: 50%;
-    left: 100px;
-    width: 300px;
-    text-align: left;
-    color: grey;
-
-}
-
-
-.slide .item:nth-child(2) .content {
-    display: block;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    background-color:purple;
+    width: 100%;
+    height: auto;
+    z-index: 800;
+    border: 4px solid blue;
 }
 
 
@@ -94,6 +65,7 @@
     color:green;
 }
 
+
 .big-defile{
     position: absolute;
     top:0;
@@ -103,26 +75,13 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.big-defile img{
+    border: 2px red solid;
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: white;
+}
 
 
 /*
@@ -134,38 +93,29 @@
 
 .thumbnail{
     position: absolute;
-    bottom: 150px;
-    left: 25%;
-    width: 75%;
-    height:250px;
-
+    bottom: 25px;
+    /**/
+    left: 50%;
+    /**/
+    width: 100%;
+    height:auto;
     z-index: 100;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     gap: 2px;
     background-color: transparent;
     //background-color: blue;
-    
 }
 
+
 .thumbnail .card{
-    //border: 2px solid red;
+    border: 2px solid green;
     width: 150px;
     height: 220px;
     flex-shrink: 0;
     position: relative;
     border-radius: 10px;
-
 }
-
-
-/*
-.thumbnail .card:nth-child(0) {
-    position: relative;
-    left: 15px;
-}
-*/
-
 
 
 .thumbnail .card:nth-child(1) {
@@ -175,37 +125,34 @@
 
 
 
-
-.thumbnail .card:nth-child(2) {
+.thumbnail .card:nth-child(N+1) {
     position: relative;
     left: 45px;
 }
 
 
+/*  decoller chacunes des card cachées*/
 
 
-.thumbnail .card:nth-child(3) {
-    position: relative;
-    left: 45px;
-}
-
-.thumbnail .item img{
-    width: 100%;
-    height: 100%;
+.thumbnail .card img{;
     object-fit: cover;
     border-radius: 10px;
+    width:140px;  
+    //height:auto;
 }
+
 
 
 .arrows{
     position: absolute;
-    top: 80%;
-    right:40%;
+    top: 75%;
+    left: 38%;
     width:300px;
     max-width:30%;
     display: flex;
     gap: 10px;
     align-items: center;
+    background-color: transparent;
 }
 
 
@@ -213,22 +160,52 @@
     width: 40px;
     height:40px;
     border-radius: 50%;
-    background-color: grey;
-    border: none;
+    background-color: black;
+    border: 1px solid black;
     color: white;
     font-weight: bold;
-    transition: 3s;
+    transition: 1s;
     z-index: 100;
-
 }
+
 
 .arrows button:hover{
-    background-color:white;
-    color:grey;
-
+    background-color:grey;
+    border: 1px solid grey;
+    color:black;
 }
 
 
+
+.big-defile .arrows .prev{
+    color:grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /******** gestion de l'animation********/
+
+
+
+
+    
+
+
+/*
 .big-defile .thumbnail .item:nth-child(1){
     z-index: 1;
 }
@@ -400,43 +377,65 @@
     }
 }
 
+*/
 
 
 
-.thumbnail .card{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 10%;
-    left: 10px;
-}
+
+
+/*********autres, boite a outils***********/
+
+
 
 
 /*
-.thumbnail .card:nth-child(1){
+
+.container .slide .item{
+    width:300px;
+    height:300px;
     position: absolute;
-    top: 10%;
-    left: 10px;
-    width:200px;
-    height:200px;
+    top:10%;
+    transform: translate(-50%, 30%);
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width:100%;
+    height: 100%
 }
 
 
+.slide .item:nth-child(3){
+    left:50%;
+}
 
 
-.thumbnail .card:nth-child(2){
+.slide .item:nth-child(4) {
+    left: calc(50% + 550px);
+    opacity: 0;
+}
+
+
+.item .content {
     position: absolute;
-    top: 10%;
-    left: 40px;
-    width:200px;
-    height:200px;
-    display: flex;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: grey;
 }
-    */
 
 
-
-.thumbnail .card img{
-    width:185px;
-    height:200px;
+.slide .item:nth-child(2) .content {
+    display: block;
 }
+
+
+*/

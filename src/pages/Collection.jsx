@@ -112,7 +112,7 @@ const handlenext = () => {
 
   return(
     
-    <div className="container">
+    <div className="containerr">
       <div className="slide">
         
        
